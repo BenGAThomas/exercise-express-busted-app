@@ -1,4 +1,5 @@
-modules.exports = [
+//Error 14 fixing a spelling issue
+module.exports = [
     {
         id: 1,
         slug: 'red_ranger',
@@ -10,7 +11,8 @@ modules.exports = [
         slug: 'black_ranger',
         name: 'Black Ranger',
         zord: 'Mastodon'
-    }
+    },
+    //Error 6 adding a , to the above line
     {
         id: 3,
         slug: 'pink_ranger',
@@ -19,14 +21,16 @@ modules.exports = [
     },
     {
         id: 4,
-        slug: 'yello_ranger',
+        //Error 7 adding a w for misspelling
+        slug: 'yellow_ranger',
         name: 'Yellow Ranger',
         zord: 'Sabretooth Tiger'
     },
     {
         id: 5,
         slug: 'blue_ranger',
-        name: 'Blue ranger',
+        //Error 8 making the r in blue ranger a capitol R
+        name: 'Blue Ranger',
         zord: 'Triceratops'
     },
     {

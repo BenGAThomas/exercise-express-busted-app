@@ -1,7 +1,10 @@
+'use strict';
+
 const express = require('express');
 const router = express.Router();
 
-const rangersModel = require('../db');
+//Error 13 correcting source path
+const rangersModel = require('../model/db');
 
 router.get('/', (req, res) => {
     res.render('template', {
@@ -17,7 +20,9 @@ router.get('/', (req, res) => {
 
 router.get('/:slug', (req, res) => {
     const { slug } = req.params;
-    const ranger = rangersModel.find((ranger => ranger.slug === slug)
+
+    //Error 4 removed an extra (
+    const ranger = rangersModel.find(ranger => ranger.slug === slug)
     if (ranger) {
         res.render('template', {
             locals: {
@@ -33,3 +38,7 @@ router.get('/:slug', (req, res) => {
     }
 
 });
+
+
+//Error 8 adding the s to exports
+module.exports = router;
